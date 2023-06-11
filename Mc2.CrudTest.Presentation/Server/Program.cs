@@ -1,3 +1,5 @@
+using Mc2.CrudTest.Application.Interfaces;
+using Mc2.CrudTest.Application.Services;
 using Mc2.CrudTest.Persistence.Context;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +23,9 @@ namespace Mc2.CrudTest.Presentation
             {
                 option.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection"));
             });
+
+            builder.Services.AddScoped<ITestDbContext, TestDbContext>();
+            builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

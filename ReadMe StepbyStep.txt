@@ -1,5 +1,6 @@
 
-
+Commit: git init
+----------------------------------------------------------------
 001: Change Clean Architecture
 
 	Add Domain
@@ -7,6 +8,8 @@
 	Add Common
 	Add Persistence
 
+Commit: Change & Add Clean Architecture
+----------------------------------------------------------------
 002: install EF Core
 
 	NuGet\Install-Package Microsoft.EntityFrameworkCore.SqlServer -Version 8.0.0-preview.1.23111.4
@@ -28,3 +31,7 @@
             {
                 option.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection"));
             });
+	
+Commit: Add Context
+----------------------------------------------------------------
+004: Add ResultDto.cs in Common
