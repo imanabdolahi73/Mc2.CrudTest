@@ -1,4 +1,6 @@
+using Mc2.CrudTest.Persistence.Context;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.EntityFrameworkCore;
 
 namespace Mc2.CrudTest.Presentation
 {
@@ -14,6 +16,11 @@ namespace Mc2.CrudTest.Presentation
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
+
+            builder.Services.AddDbContext<TestDbContext>(option =>
+            {
+                option.UseSqlServer(builder.Configuration.GetConnectionString("TestConnection"));
+            });
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
