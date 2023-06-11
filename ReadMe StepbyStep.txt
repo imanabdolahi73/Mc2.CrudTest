@@ -35,3 +35,15 @@ Commit: Change & Add Clean Architecture
 Commit: Add Context
 ----------------------------------------------------------------
 004: Add ResultDto.cs in Common
+
+005 Add CustomerRepository
+	CustomerRepository.cs
+	ICustomerRepository.cs
+	AddCustomerDto.cs
+	EditCustomerDto.cs
+
+006: Add Service To Program.cs
+	builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+
+Commit: Add CustomerRepository
+----------------------------------------------------------------
