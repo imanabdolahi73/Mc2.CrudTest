@@ -47,3 +47,12 @@ Commit: Add Context
 
 Commit: Add CustomerRepository
 ----------------------------------------------------------------
+
+007: Add Swagger , Add CustomerController in New Api Project
+
+                                                        *************---------As you said, I changed the architecture----------*************
+
+
+
+
+

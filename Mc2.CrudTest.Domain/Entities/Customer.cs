@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+﻿using Mc2.CrudTest.Common;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,7 +18,6 @@ namespace Mc2.CrudTest.Domain.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         
-        //[JsonConverter(typeof(DateOnlyJsonConverter))]
         public DateOnly DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }        

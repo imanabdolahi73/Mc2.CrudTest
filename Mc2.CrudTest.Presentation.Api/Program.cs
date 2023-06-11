@@ -1,6 +1,6 @@
 using Mc2.CrudTest.Application.Interfaces;
 using Mc2.CrudTest.Application.Services;
-using Mc2.CrudTest.Domain.Entities;
+using Mc2.CrudTest.Common;
 using Mc2.CrudTest.Persistence.Context;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +10,7 @@ builder.Services.AddScoped<ITestDbContext, TestDbContext>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 
 builder.Services.AddControllers();
-   
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
